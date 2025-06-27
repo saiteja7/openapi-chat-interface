@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #E5F5FC;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+/* Buttons */
+.sidebar button,
+.sidebar select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background-color: #006298;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sidebar select {
+  background: white;
+  color: #006298;
+}
+
+/* Chat Area */
+.chatArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.chatArea h2 {
+  color: #006298;
+  font-weight: 700;
+}
+
+/* Chat Box */
+.chatBox {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1px solid #E8E9E9;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+/* Placeholder when empty */
+.placeholder {
+  color: #666666;
+  font-style: italic;
+}
+
+/* Message Bubbles */
+.message {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.user {
+  background-color: #00635B;
+  color: #fff;
+  margin-left: auto;
+  text-align: right;
+}
+
+.assistant {
+  background-color: #E8E9E9;
+  color: #333;
+  margin-right: auto;
+}
+
+/* Loading state */
+.loading {
+  font-style: italic;
+  color: #666666;
+}
+
+/* Markdown styling */
+.code-block {
+  background: #F5F8FA;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+  border: 1px solid #DDE5E9;
+}
+
+/* Input form */
+.inputForm {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.inputForm input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #E8E9E9;
+  border-radius: 6px;
+}
+
+.inputForm button {
+  padding: 0.75rem 1rem;
+  background-color: #006298;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.inputForm button:disabled {
+  background: #84BD00;
+  opacity: 0.6;
+}
+
+/* Scrollbar styling */
+.chatBox::-webkit-scrollbar {
+  width: 6px;
+}
+.chatBox::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
